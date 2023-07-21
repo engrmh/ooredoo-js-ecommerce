@@ -1,0 +1,70 @@
+.category{
+    z-index: 1;
+    background-color: #fff;
+    width: 12.4rem;
+    position: absolute;
+    right: 4.5rem;
+    top: -1rem;
+    border-radius: 10px;
+}
+.categoryTitle{
+    background-color: #EF394E;
+    display: flex;
+    padding: .5rem 1rem .5rem .5rem;
+    border-radius: 10px;
+
+}
+.categoryTitle h1{
+    font-size: 1rem;
+    margin-right: .5rem;
+    color: #fff;
+}
+#categoryMenu{
+    display: none;
+    color: rgba(91,90,90,1);
+    font-size: .9rem;
+}
+.menuItem{
+    list-style-type: none;
+    width: 9rem;
+    border-bottom: 1px solid #eee;
+    height: 3.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#phoneBrands{
+    display: none;
+    background-color: #fff;
+    width: 12.4rem;
+    padding-left: 1rem;
+    padding-right: 1.3rem;
+    position: absolute;
+    right: 12rem;
+    top: 1rem;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 15px rgba(0.9529411792755127, 0.42352938652038574, 0.42352938652038574, 0.28999999165534973);
+}
+/* .phoneBrands > li{
+    list-style-type: none;
+    width: 9rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #eee ;
+} */
+.brandArrow{
+    position: relative;
+    right: 4.7rem;
+}
+.category:hover #categoryMenu{
+    display: block;
+}
+#mobilesList:hover #phoneBrands{
+    display: block;
+}
+#phoneBrands:hover #categoryMenu{
+    filter: blur(100%);
+}

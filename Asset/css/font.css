@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "diroozFont";
+    src: url("../font/Dirooz-Farsi-Digits-Without-Latin/Dirooz-FD-WOL.eot");
+    src: url("../font/Dirooz-Farsi-Digits-Without-Latin/Dirooz-FD-WOL.woff") format("woff"),
+    url("../font/Dirooz-Farsi-Digits-Without-Latin/Dirooz-FD-WOL.woff2") format("woff2"),
+    url("../font/Dirooz-Farsi-Digits-Without-Latin/Dirooz-FD-WOL.ttf") format("ttf");
+    }
+
+    @font-face {
+        font-family: "IRANSansWeb"; 
+            src: url("//db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.eot"); 
+            src: url("//db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.eot?#iefix") format("embedded-opentype"), 
+            url("//db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff2") format("woff2"), 
+            url("//db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.woff") format("woff"), 
+            url("//db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.ttf") format("truetype"), 
+            url("//db.onlinewebfonts.com/t/002254488ce1877d55ad3693e527ad1e.svg#IRANSansWeb") format("svg"); 
+    }

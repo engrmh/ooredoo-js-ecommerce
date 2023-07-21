@@ -1,0 +1,24 @@
+{
+  "name": "ooredoo-test",
+  "version": "1.0.0",
+  "description": "practice to build a e-commerce site",
+  "main": "index.html",
+  "scripts": {
+    "liveServer": "live-server --open=./index.html"
+  },
+  "author": "Mohammad Hosein Salim Bahrami",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "boxicons": "^2.1.4",
+    "font-awesome": "^4.7.0",
+    "normalize.css": "^8.0.1",
+    "owl.carousel": "^2.3.4",
+    "pagination": "^0.4.6",
+    "particles.js": "^2.0.0",
+    "sweetalert2": "^11.7.3"
+  }
+}

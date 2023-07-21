@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="./Asset/css/main.css">
+
+    <title>اوریدو - ورود به حساب کاربری</title>
+</head>
+<body> 
+    <main class="w-100 vh-100 d-flex justify-content-center align-items-center loginBackground">
+        <div class="position-absolute w-100 vh-100 overflow-hidden" id="particles-js"></div>
+        <div class="col-11 col-md-4 d-flex justify-content-center align-items-center flex-column glass p-3">
+            <img src="./Asset/img/ooredoo.svg" class="img-fluid mb-3" style="width: 13rem;" alt="">
+            <h4 class="my-4 mt-5 text-white">ورود به حساب کاربری</h4>
+            <input type="text" required class="form-control mb-2 border-0 rounded bg-light shadow py-3 emailField" placeholder="ایمیل" autocomplete="on"  dir="ltr">
+            <input type="password" required class="form-control mb-2 border-0 rounded bg-light shadow py-3 d-none passwordField" placeholder="رمز عبور" dir="ltr">
+            <div class="my-3">
+                <a href="#" class="text-white text-decoration-none">فراموشی رمز عبور</a>
+                <span class="text-white mx-3">|</span>
+                <a href="#" class="text-white text-decoration-none">ایجاد حساب جدید</a>
+            </div>
+            <button type="submit" class="col-10 btn btn-danger py-2 emailValidationBtn">
+                هویت سنجی ایمیل
+            </button>
+            <button type="submit" class="col-10 btn btn-danger py-2 validationBtn d-none">
+                ورود
+            </button>
+            <a href="index.html" class="text-decoration-none text-white mt-3">
+                بازگشت به فروشگاه
+            </a>
+        </div>
+    </main>
+</body>
+<script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="./Asset/js/particles.js"></script>
+<script src="./Asset/js/validation.js" type="module"></script>
+</html>
+

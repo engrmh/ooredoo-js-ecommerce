@@ -1,0 +1,141 @@
+@import url(./font.css);
+@import url(./category.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "diroozFont";
+}
+html{
+    direction: rtl;
+    cursor: default;
+}
+
+#userAccount{
+    margin: 0;
+    justify-content: end;
+}
+
+#cartBtn{
+    background-color: #ffd3d4;
+}
+
+.banner{
+    background: linear-gradient(225deg , rgba(232,232,232,.8) 57%, rgba(232,232,232,0)) , url(/Asset/img/bac1.png);
+    background-size: 100% 100%;
+    /* background-position: center; */
+    background-size: cover;
+    width: 100%;
+    height: 42rem;
+}
+
+.themeColor{
+    color: #EF394E;
+}
+#backThemeColor{
+    background-color: #EF394E;
+    color: #fff;
+}
+.englishText{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bannerEnglishText{
+    font-family: sans-serif;
+    color: #5b5b5b;
+    letter-spacing: 3px;
+}
+#dicount{
+    font-size: 13px;
+}
+#firstProductSectionItem{
+    border-bottom: 5px solid #fff;
+    box-shadow: 0px 4px 15px rgba(0.9529411792755127, 0.42352938652038574, 0.42352938652038574, 0.28999999165534973);
+    /* margin: 0 2px; */
+}
+#firstProductSectionItem:hover{
+    border-bottom: 5px solid #EF394E;
+}
+#discountedProductImg{
+    height: 5.6rem;
+}
+
+#newProductImg{
+    height: 12rem;
+}
+
+#discountedProductTitle h6{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#leftBanner{
+    display: flexbox;
+    align-items: end;
+}
+
+.newProductText{
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#newProductContext{
+    font-size: 1.05rem;
+}
+
+#countdownProduct{
+    background-image: url('../img/lappic-min 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footer{
+    background-color: #f2f2f2;
+    border-radius: 1.2rem;
+    /* height: 50rem; */
+}
+
+#basketBtn:hover > #sellBasket{
+    display: block;
+}
+
+.loginBackground{
+    background-color: #1b1d31;
+    /* background-image: url('../img/robert-lukeman-_RBcxo9AU-U-unsplash.jpg');
+    background-repeat: repeat;
+    background-size: cover; */
+}
+.glass{
+    background: rgba( 255, 255, 255, 0.1 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+a:hover{
+    cursor: pointer;
+}
+
+input{
+    font-family: sans-serif;
+}
+
+input::placeholder{
+    font-family: "diroozFont";
+    direction: ltr;
+}
+
+.back404{
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+.back404 > main > div > h1{
+    font-size: 10rem;
+    text-shadow: 0px 0px 50px #fff;
+}
+.back404 > main > div > h3{
+    text-shadow: 0px 0px 50px #000;
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ooredoo</title>
+
+    <link rel="stylesheet" href="./Asset/css/main.css">
+
+
+    <!-- <link rel="stylesheet" href="./Asset/css/"> -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="/node_modules/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
+
+</head>
+
+<body>
+    <header class="container-fluid py-2 pt-1 py-lg-4 shadow bg-white">
+        <nav
+            class="navbar bg-body-tertiary d-flex align-items-center justify-content-between justify-content-lg-center">
+            <div class="container p-0">
+                <div class="col-2 col-lg-1">
+                    <a class="navbar-brand justify-content-center" href="#">
+                        <img src="./Asset/img/ooredoo.svg" alt="ooredoo" width="90" height="24" class="m-0 p-0">
+                    </a>
+                </div>
+                <div class="col-md-5 px-3 justify-content-start">
+                    <div class="navbar-nav d-none d-lg-flex justify-content-between align-items-center flex-row pe-2">
+                        <a class="nav-link mx-2" aria-current="page" href="index.html">خانه</a>
+                        <a class="nav-link mx-2" href="#">محصولات</a>
+                        <a class="nav-link mx-2" href="#">پرفروش ها</a>
+                        <a class="nav-link mx-2" href="#">وبلاگ آموزشی</a>
+                        <a class="nav-link mx-2" href="#">تماس با ما</a>
+                        <a class="nav-link mx-2" href="#">درباره ما</a>
+                    </div>
+                </div>
+                <div class="col-7 col-lg-6">
+                    <div class="row justify-content-between justify-content-lg-end align-items-center">
+                        <div class="col-12 col-lg-7">
+                            <form class="d-flex border rounded py-1 btn-outline-danger" role="search">
+                                <input class="form-control me-2 border-0" type="search" placeholder="جستجو کنید..."
+                                    aria-label="Search">
+                                <button class="btn d-flex justify-content-center align-items-center border-0"
+                                    type="submit">
+                                    <i class="bx bx-search fs-5 text-danger"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-lg-2 d-none d-lg-flex justify-content-center" id="basketBtn">
+                            <button class="btn btn-outline-danger py-2 position-relative" id="cartBtn">
+                                <i class="bx bx-basket fs-5 p-1"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                                    0
+                                </span>
+                            </button>
+                        </div>
+                        <div class="col-lg-3 d-none d-lg-block">
+                            <a href="login.html" class="btn btn-danger d-flex justify-content-between align-items-center">
+                                <i class="bx bx-user me-2"></i>
+                                <p class="fs-6 py-1" id="userAccount">حساب کاربری</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+
+        <!-- Sell Basket -->
+        <section class="position-relative">
+            <div class="position-absolute end-0 rounded col-3 bg-light p-3 shadow d-none" id="sellBasket">
+                <div class="row" id="shopCard">
+                    <h5 class="text-center border-bottom pb-3">سبد خرید</h5>
+                    <div class="col-12" id="ShopCardValue">
+                        <!-- <div class="col-12 d-flex justify-content-between align-items-center my-2">
+                            <h6 class="col-8 my-0">بلوز مردانه</h6>
+                            <div class="col-3 d-flex justify-content-between align-items-center">
+                                <h6 class="my-0">
+                                    <span>2</span>
+                                     عدد
+                                </h6>
+                                <i class='bx bx-trash'></i>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Menu -->
+        <section>
+            <div class="col-12 d-flex d-lg-none py-2 px-3 justify-content-between">
+                <a class="btn border-0 text-decoration-none" href="#">محصولات</a>
+                <a class="btn border-0 text-decoration-none" href="#">پرفروش ها</a>
+                <a class="btn border-0 text-decoration-none" href="#">وبلاگ آموزشی</a>
+            </div>
+        </section>
+    </header>
+
+    <!-- Destop Category -->
+    <section class="d-none d-lg-block position-relative">
+        <div class="category position-absolute">
+            <div class="categoryTitle">
+                <img src="./Asset/img/element-3.svg">
+                <h1>دسته بندی ها</h1>
+            </div>
+            <div class="list-group" id="categoryMenu">
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        لوازم جانبی گوشی
+                    </h6>
+                </a>
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        کیف و کاور گوشی
+                    </h6>
+                </a>
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        پاوربانک (شارژر همراه)
+                    </h6>
+                </a>
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        پایه نگهدارنده گوشی
+                    </h6>
+                </a>
+                <div class="list-group-item border-0 text-decoration-none text-black position-relative my-4 mb-3" id="mobilesList">
+                    <div class="d-flex justify-content-between align-items-center" id="mobileList">
+                        <h6 class="">
+                            گوشی موبایل
+                        </h6>
+                        <i class='bx bx-chevron-left text-danger fs-3' ></i>
+                    </div>
+                    <div class="list-group position-absolute" id="phoneBrands">
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">اپل</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">سامسونگ</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">هوآوی</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">شیائومی</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">آنر</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2">نوکیا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="container pb-5 pb-md-0" id="productHolder">
+            <!-- <h4 class="mt-md-5 border-bottom pb-3 pt-4 pt-lg-3" id="productTitle">لباس مردانه </h4>
+            <div class="col-12 my-5 border-bottom pb-5">
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="row">
+                            <div class="col-1 d-flex justify-content-center align-content-center flex-column">
+                                <i class='bx bx-heart fs-3 mb-4'></i>
+                                <i class='bx bxs-share-alt fs-3 mb-4' ></i>
+                                <i class='bx bxs-bell-ring fs-3 mb-4' ></i>
+                                <i class='bx bx-line-chart fs-3 mb-4' ></i>
+                                <i class='bx bx-list-ul fs-3 mb-4'></i>
+                            </div>
+                            <div class="col-9 d-flex justify-content-md-start ms-5 ms-lg-0 align-items-center">
+                                <img src="./Asset/img/productsImages/MapBookPro.png" class="img-fluid" style="width: 30rem;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 px-2 bg-light shadow-lg rounded">
+                        <h4 class="text-center my-3 pb-2 border-bottom ">
+                            55,000,000
+                            <span>تومان</span>
+                        </h4>
+                        <h6 class="mb-2 pb-2 px-4">
+                            گارانتی ندارد
+                        </h6>
+                        <h6 class="mb-5 px-4">
+                            دسته بندی:
+                            <span>متن</span>
+                        </h6>
+                        <div class="d-flex justify-content-center mb-3 mb-md-0">
+                            <a href="" class="btn btn-danger text-center w-50 mx-3">افزودن به سبد خرید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                <h4 class="text-decoration-underline pb-2">
+                    توضیحات محصول
+                </h4>
+                <p class="pe-lg-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, id dolor aspernatur eius aliquam nesciunt possimus excepturi ratione velit quod, impedit facilis culpa sunt laboriosam similique. Recusandae nam tempora quam unde natus ad accusantium ipsa at error, ratione suscipit, beatae, neque quae id maxime provident iste ipsam veritatis! Nam deserunt quas vitae rem magnam officia maiores maxime dolore totam ullam.
+                </p>
+            </div> -->
+
+        </section>
+
+    </main>
+
+    <footer class="container d-none d-md-block px-2">
+        <div class="col-12 mb-4" id="footer">
+            <div class="row mx-5">
+                <div class="col-12 mb-3">
+                    <div class="row p-4">
+                        <div class="col-8">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h5 class="lh-lg">لینک های مهم</h5>
+                                        <ul class="mb-md-4 mb-lg-0 ps-2 text-black-50">
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">اتاق خبر اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">فروش در اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">فرصت‌های شغلی</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">گزارش تخلف در اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">تماس با اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">درباره اریدو</a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <h5 class="lh-lg">همکاری با ما</h5>
+                                        <ul class="mb-md-4 mb-lg-0 ps-2 text-black-50">
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">اتاق خبر اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">فروش در اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                              <a href="#" class="text-black-50 text-decoration-none">نحوه ثبت سفارش</a>
+                                            </li>
+                                            <li class="lh-lg">
+                                                <a href="#" class="text-black-50 text-decoration-none">رویه ارسال سفارش</a>
+                                            </li>
+                                            <li class="lh-lg">
+                                              <a href="#" class="text-black-50 text-decoration-none">شیوه‌های پرداخت</a>
+                                            </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">اتاق خبر اریدو</a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3 px-0">
+                                        <h5 class="lh-lg">خدمات مشتریان</h5>
+                                        <ul class=" mb-md-4 mb-lg-0 ps-2 text-black-50">
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">پاسخ به پرسش‌های متداول</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">رویه‌های بازگرداندن کالا</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">شرایط استفاده</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">حریم خصوصی</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">گزارش باگ</a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="col-12">
+                                <h5 class="lh-lg mb-5">
+                                    هدف ما جلب اعتماد شما است
+                                </h5>
+                                <div class="d-flex justify-content-between">
+                                    <img class="img-fluid" src="./Asset/img/samandhi.png" alt="">
+                                    <img class="img-fluid" src="./Asset/img/samanBank.png" alt="">
+                                    <img class="img-fluid" src="./Asset/img/eNamad.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <img class="img-fluid mb-3" src="./Asset/img/ooredoo.svg" alt="">
+                    <p class="text-black-50">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                    </p>
+                    <div class="bg-light d-flex justify-content-between align-item-center px-3 py-4 mt-4 mb-5 shadow rounded-4">
+                        <p class="my-0" style="font-size: 13px;">
+                            نظرات ، پیشنهادات و انتقادات خود را با ما در میان بگذارید
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center py-1" >
+                            <h6 class="my-0 me-2" style="font-size: 13px;">
+
+                                <span class="text-danger" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">تهران ، شهرک غرب ،</span>
+                                بلوار کاوه جنب بانک ملی پلاک ۹۴ واحد ۸
+                            </h6>
+                            <i class='bx bx-current-location'></i>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center py-1">
+                            <h6 class="my-0 me-2" style="font-size: 13px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                                <span class="text-danger" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">info</span>@skylax.ir
+                            </h6>
+                            <i class='bx bx-envelope' ></i>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center py-1">
+                            <h6 class="my-0 me-2" style="font-size: 13px;">
+                                <span class="text-danger">021</span>-22334455
+                            </h6>
+                            <i class='bx bx-phone-call' ></i>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h6 class="my-0" style="font-size: 13px;">
+                            برای استفاده از مطالب اریدو، داشتن «هدف غیرتجاری» و ذکر «منبع» کافیست. تمام حقوق اين وب‌سايت نیز برای شرکت فناوران اسکیلاکس (فروشگاه آنلاین ‌اریدو) است.
+                        </h6>
+                        <h6 class="my-0" style="font-size: 13px;">
+                            <span class="text-danger">طراحی و توسعه</span> : فناوران اسکیلاکس
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+       <!-- Mobile Footer -->
+    <section>
+        <div
+            class="col-12 d-flex d-lg-none py-1 px-3 justify-content-between align-items-center position-fixed bottom-0 start-0 shadow bg-white">
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center"
+                href="index.html">
+                <i class='bx bx-home fs-1 mb-1 text-danger'></i>
+                <p class="m-0">خانه</p>
+            </a>
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center"
+                href="404.html">
+                <i class='bx bx-category fs-1 mb-1 text-danger'></i>
+                <p class="m-0">دسته بندی</p>
+            </a>
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center position-relative"
+                href="shoppingCart.html">
+                <i class='bx bx-basket fs-1 mb-1 text-danger'></i>
+                <p class="m-0">سبد خرید</p>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+                    id="mobileCartValueBadge">
+                    0
+                </span>
+            </a>
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center"
+                href="login.html">
+                <i class='bx bx-user fs-1 mb-1 text-danger'></i>
+                <p class="m-0">حساب</p>
+            </a>
+        </div>
+    </section>
+</body>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./Asset/js/product.js" type="module"></script>
+
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ooredoo</title>
+
+    <link rel="stylesheet" href="./Asset/css/main.css">
+
+
+    <!-- <link rel="stylesheet" href="./Asset/css/"> -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="/node_modules/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
+
+</head>
+
+<body>
+    <header class="container-fluid py-2 pt-1 py-lg-4 shadow bg-white">
+        <nav
+            class="navbar bg-body-tertiary d-flex align-items-center justify-content-between justify-content-lg-center">
+            <div class="container p-0">
+                <div class="col-2 col-lg-1">
+                    <a class="navbar-brand justify-content-center" href="#">
+                        <img src="./Asset/img/ooredoo.svg" alt="ooredoo" width="90" height="24" class="m-0 p-0">
+                    </a>
+                </div>
+                <div class="col-md-5 px-3 justify-content-start">
+                    <div class="navbar-nav d-none d-lg-flex justify-content-between align-items-center flex-row pe-2">
+                        <a class="nav-link mx-2" aria-current="page" href="#">خانه</a>
+                        <a class="nav-link mx-2" href="#">محصولات</a>
+                        <a class="nav-link mx-2" href="#">پرفروش ها</a>
+                        <a class="nav-link mx-2" href="#">وبلاگ آموزشی</a>
+                        <a class="nav-link mx-2" href="#">تماس با ما</a>
+                        <a class="nav-link mx-2" href="#">درباره ما</a>
+                    </div>
+                </div>
+                <div class="col-7 col-lg-6">
+                    <div class="row justify-content-between justify-content-lg-end align-items-center">
+                        <div class="col-12 col-lg-7">
+                            <form class="d-flex border rounded py-1 btn-outline-danger" role="search">
+                                <input class="form-control me-2 border-0" type="search" placeholder="جستجو کنید..."
+                                    aria-label="Search">
+                                <button class="btn d-flex justify-content-center align-items-center border-0"
+                                    type="submit">
+                                    <i class="bx bx-search fs-5 text-danger"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-lg-2 d-none d-lg-flex justify-content-center" id="basketBtn">
+                            <button class="btn btn-outline-danger py-2 position-relative" id="cartBtn">
+                                <i class="bx bx-basket fs-5 p-1"></i>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                                    0
+                                </span>
+                            </button>
+                        </div>
+                        <div class="col-lg-3 d-none d-lg-block">
+                            <a href="login.html" class="btn btn-danger d-flex justify-content-between align-items-center">
+                                <i class="bx bx-user me-2"></i>
+                                <p class="fs-6 py-1" id="userAccount">حساب کاربری</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+
+        <!-- Sell Basket -->
+        <section class="position-relative">
+            <div class="position-absolute end-0 rounded col-3 bg-light p-3 shadow d-none" id="sellBasket">
+                <div class="row" id="shopCard">
+                    <h5 class="text-center border-bottom pb-3">سبد خرید</h5>
+                    <div class="col-12" id="ShopCardValue">
+                        <!-- <div class="col-12 d-flex justify-content-between align-items-center my-2">
+                            <h6 class="col-8 my-0">بلوز مردانه</h6>
+                            <div class="col-3 d-flex justify-content-between align-items-center">
+                                <h6 class="my-0">
+                                    <span>2</span>
+                                     عدد
+                                </h6>
+                                <i class='bx bx-trash'></i>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- <button class="btn btn-success mt-3">
+                        مشاهده سبد خرید
+                    </button>
+                    <button class="btn btn-danger mt-3">
+                        تسویه حساب
+                    </button> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Menu -->
+        <section>
+            <div class="col-12 d-flex d-lg-none py-2 px-3 justify-content-between">
+                <a class="btn border-0 text-decoration-none" href="store.html">محصولات</a>
+                <a class="btn border-0 text-decoration-none" href="#">پرفروش ها</a>
+                <a class="btn border-0 text-decoration-none" href="#">وبلاگ آموزشی</a>
+            </div>
+        </section>
+    </header>
+
+    <!-- Destop Category -->
+    <section class="d-none d-lg-block position-relative">
+        <div class="category position-absolute">
+            <div class="categoryTitle">
+                <img src="./Asset/img/element-3.svg">
+                <h1>دسته بندی ها</h1>
+            </div>
+            <div class="list-group" id="categoryMenu">
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        لوازم جانبی گوشی
+                    </h6>
+                </a>
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        کیف و کاور گوشی
+                    </h6>
+                </a>
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        پاوربانک (شارژر همراه)
+                    </h6>
+                </a>
+                <a href="#" class="list-group-item border-0 text-decoration-none text-black border-bottom my-4 d-flex align-items-center">
+                    <h6>
+                        پایه نگهدارنده گوشی
+                    </h6>
+                </a>
+                <div class="list-group-item border-0 text-decoration-none text-black position-relative my-4 mb-3" id="mobilesList">
+                    <div class="d-flex justify-content-between align-items-center" id="mobileList">
+                        <h6 class="">
+                            گوشی موبایل
+                        </h6>
+                        <i class='bx bx-chevron-left text-danger fs-3' ></i>
+                    </div>
+                    <div class="list-group position-absolute" id="phoneBrands">
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">اپل</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">سامسونگ</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">هوآوی</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">شیائومی</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2 border-bottom">آنر</a>
+                        <a class="list-group-item text-decoration-none text-dark border-0 my-2">نوکیا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+
+        <!-- Banner -->
+        <section class="banner">
+            <div class="col-11 col-lg-6 d-flex justify-content-center align-items-start ms-lg-5 flex-column h-100 ps-2 ps-lg-0 bannerContext">
+                <h4 class="themeColor mb-4">
+                    لذت استفاده از محصولات با کیفیت
+                </h4>
+                <div class="d-flex justify-content-center mb-3">
+                    <h4 class="text-dark me-3">
+                        تخفیف آیفون ۱۳ پرومکس
+                    </h4>
+                    <button class="btn bg-danger text-light rounded-5 py-1">% 30 تخفیف</button>
+                </div>
+                <h6 class="bannerEnglishText mb-3">
+                    iPhone 13 Pro Max Discount
+                </h6>
+                <p class="text-dark w-auto">
+                    گوشی‌های هوشمند خانواده آیفون 13 در قالب چهار گوشی هوشمند آیفون 13 پرو مکس، آیفون 13 پرو، آیفون 13‌ و آیفون 13 مینی معرفی شدند. پرچمداران جدید فوق العاده با عملکرد بهتر و خیره کننده به نسبت نسل قبلی، تنوع رنگی بالا به‌مراتب با‌کیفیت‌تراشاره کنیم.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <button class="btn bg-danger text-light rounded-4 py-2">سفارش محصول</button>
+                    <a href="#" class="btn text-decoration-none text-black-50 me-3 d-flex justify-content-between align-items-center ms-3">
+                        <h6 class="d-flex justify-content-center align-items-center ">محصولات مرتبط ...</h6>
+                        <i class='bx bx-arrow-back'></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="w-100 h-50 py-2 py-lg-4 px-2 px-lg-3 d-flex justify-content-center align-items-center">
+            <img src="./Asset/img/ویژگی های سایت.svg" class="img-fluid" alt="">
+        </section>
+
+        <!-- Discounted Products -->
+        <section class="py-3 container-fluid">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex flex-column align-content-start justify-content-start">
+                        <h4>
+                            محصولات
+                            <span class="themeColor">تخفیف دار</span>
+                        </h4>
+                        <h6 class="text-black-50 englishText">
+                            Discounted Products
+                        </h6>
+                    </div>
+                    <a href="store.html" class="btn btn-danger">محصولات بیشتر</a>
+                </div>
+
+                <div class="col-12">
+                    <div class="row" id="discountedProducts">
+                        <!-- <div class="col-6 col-md-3 mb-3 mb-md-0">
+                            <div class="pt-0 d-flex flex-column justify-content-center align-items-center shadow rounded" id="firstProductSectionItem">
+                                <h6 class="col-4 text-light bg-danger text-center px-1 py-2 rounded-bottom">
+                                    <span class="englishText">%</span>
+                                    30 تخفیف
+                                </h6>
+                                <img src="./Asset/img/productsImages/headphone.png" class="img-fluid my-4" alt="">
+                                <div class="w-75 overflow-auto" id="discountedProductTitle">
+                                    <h6 class="mb-2 px-2 flex-nowrap">هوشمند</h6>
+                                </div>
+                                <div class="">
+                                    <img src="./Asset/img/offStar.svg" class="img-fluid" alt="">
+                                    <img src="./Asset/img/offStar.svg" class="img-fluid" alt="">
+                                    <img src="./Asset/img/onStar.svg" class="img-fluid" alt="">
+                                    <img src="./Asset/img/onStar.svg" class="img-fluid" alt="">
+                                    <img src="./Asset/img/onStar.svg" class="img-fluid" alt="">
+                                </div>
+                                <span class="w-100 border-bottom"></span>
+                                <div class="d-flex justify-content-between align-items-center py-2 px-2 w-100 ">
+                                    <div class="me-2">
+                                        <p class="text-black-50 mb-0 text-decoration-line-through" id="dicount">
+                                            3,000,000
+                                        </p>
+                                        <p class="themeColor">
+                                            3,000,000
+                                            <span class="text-dark">تومان</span>
+                                        </p>
+                                    </div>
+                                    <div class="">
+                                        <button class="btn btn-danger d-flex justify-content-between align-items-center">
+                                            <i class="bx bx-basket fs-5 p-1"></i>
+                                            <h6 class="d-none d-lg-flex justify-content-center align-item-center">خرید محصول</h6>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ads Banner -->
+        <section class="container-fluid my-3">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-end">
+                        <img src="./Asset/img/بنر سمت راست.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-center justify-content-end mt-2 mt-md-0">
+                        <img src="./Asset/img/بنر سمت چپ.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Products -->
+        <section class="container-fluid ps-md-0 my-5">
+            <div class="col-12 ms-0">
+                <div class="row">
+                    <div class="col-12 col-md-3 mb-3 mb-md-0 me-0" >
+                        <div class="pt-0 d-flex flex-column justify-content-center align-items-center align-items-md-start py-4 pt-md-3 px-3 pt-lg-5 pb-md-4 pe-md-1 ps-md-4 shadow rounded-end" id="backThemeColor">
+                            <div class="mt-3 mt-md-0 mb-4 text-center text-md-start">
+                                <h6 class="text-light">
+                                    محصولات جدید
+                                </h6>
+                                <h6 class="text-light newProductText">
+                                    New Product
+                                </h6>
+                            </div>
+                            <p class="text-center text-md-start" id="newProductContext">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                            </p>
+                            <button class="btn btn-light text-danger mt-3 mb-4">محصولات بیشتر</button>
+                            <div class="col-4 d-flex justify-content-between align-items-center mb-4">
+                                <div class="rounded-pill bg-light">
+                                    <i class='bx bx-chevron-right text-danger p-2'></i>
+                                </div>
+                                <div class="rounded-pill border bg-danger">
+                                    <i class='bx bx-chevron-left p-2'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-9">
+                        <div class="row" id="newProducts">
+                            <!-- <div class="col-6 mb-3 mb-md-0">
+                                <div class="pt-0 d-flex flex-column justify-content-center align-items-center shadow rounded" id="firstProductSectionItem">
+                                    <h6 class="col-3 text-light bg-danger text-center px-1 py-2 rounded-bottom">
+                                        جدید
+                                    </h6>
+                                    <img src="./Asset/img/productsImages/headphone.png" class="img-fluid my-4" alt="">
+                                    <div class="w-75 overflow-auto" id="discountedProductTitle">
+                                        <h6 class="mb-2 px-2 flex-nowrap text-center">هوشمند</h6>
+                                    </div>
+                                    <div class="">
+                                        <img src="./Asset/img/offStar.svg" class="img-fluid" alt="">
+                                        <img src="./Asset/img/offStar.svg" class="img-fluid" alt="">
+                                        <img src="./Asset/img/onStar.svg" class="img-fluid" alt="">
+                                        <img src="./Asset/img/onStar.svg" class="img-fluid" alt="">
+                                        <img src="./Asset/img/onStar.svg" class="img-fluid" alt="">
+                                    </div>
+                                    <span class="w-100 border-bottom"></span>
+                                    <div class="d-flex justify-content-between align-items-center py-2 px-2 w-100 ">
+                                        <div class="me-2">
+                                            <p class="text-black-50 mb-0 text-decoration-line-through" id="dicount">
+                                                3,000,000
+                                            </p>
+                                            <p class="themeColor">
+                                                3,000,000
+                                                <span class="text-dark">تومان</span>
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <button class="btn btn-danger d-flex justify-content-between align-items-center">
+                                                <i class="bx bx-basket fs-5 p-1"></i>
+                                                <h6 class="d-none d-lg-flex justify-content-center align-item-center">خرید محصول</h6>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Product -->
+        <section class="d-flex justify-content-center align-items-center p-5" id="countdownProduct">
+            <div class="col-11 bg-light shadow rounded">
+                <div class="row">
+                    <div class="col-12 col-md-8 py-5 ps-5 my-2">
+                        <div class="row">
+                           <div class="col-12 col-md-8">
+                               <div class="">
+                                   <h4 class="themeColor mb-4">
+                                       لذت استفاده از محصولات باکیفیت
+                                   </h4>
+                                   <div class="d-flex justify-content-start mb-3">
+                                       <h5 class="text-dark me-3">
+                                           تخفیف مک بوک م وان مکس
+                                       </h5>
+                                       <button class="btn bg-danger text-light rounded-5 py-1 col-3 col-md-3" style="font-size: 13px;">% 30 تخفیف</button>
+                                   </div>
+                                   <h6 class="bannerEnglishText mb-3">
+                                       Macbook M1 Max discount
+                                   </h6>
+                               </div>
+                           </div>
+                           <div class="col-5 col-md-4">
+                               <div class=" col-7 text-center">
+                                <div class="mb-2 col-12 d-flex justify-content-evenly text-center">
+                                    <img src="./Asset/img/offStar.svg" class="img-fluid" style="width: 1rem;" alt="">
+                                    <img src="./Asset/img/onStar.svg" class="img-fluid" style="width: 1rem;" alt="">
+                                    <img src="./Asset/img/onStar.svg" class="img-fluid" style="width: 1rem;" alt="">
+                                    <img src="./Asset/img/onStar.svg" class="img-fluid" style="width: 1rem;" alt="">
+                                    <img src="./Asset/img/onStar.svg" class="img-fluid" style="width: 1rem;" alt="">
+                                </div>
+                                <div class="py-2 d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <p class="bg-danger mb-0 rounded text-light p-1 shadow" style="font-size: 13px;" id="second">27</p>
+                                        <i class='bx bx-chevron-down mb-0 text-danger'></i>
+                                        <p class="text-black-50 mb-0" style="font-size: 13px;">ثانیه</p>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <p class="bg-danger mb-0 rounded text-light p-1 shadow" style="font-size: 13px;" id="minuts">57</p>
+                                        <i class='bx bx-chevron-down mb-0 text-danger'></i>
+                                        <p class="text-black-50 mb-0" style="font-size: 13px;">دقیقه</p>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <p class="bg-danger mb-0 rounded text-light p-1 shadow" style="font-size: 13px;" id="hour">18</p>
+                                        <i class='bx bx-chevron-down mb-0 text-danger'></i>
+                                        <p class="text-black-50 mb-0" style="font-size: 13px;">ساعت</p>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <p class="bg-danger mb-0 rounded text-light p-1 shadow" style="font-size: 13px;" id="day">05</p>
+                                        <i class='bx bx-chevron-down mb-0 text-danger'></i>
+                                        <p class="text-black-50 mb-0" style="font-size: 13px;">روز</p>
+                                    </div>
+                                </div>
+                               </div>
+                           </div>
+                        </div>
+                        <p class="text-dark pe-5">
+                            سری لپ‌تاپ‌های مک‌بوک شرکت اپل تا به امروز بدون هیچ تعریف اضافی توانسته‌اند با بهره بردن از مشخصات فنی قدرتمند، عملکرد بسیار خوب و قابل قبولی را ارائه کنند. یکی از لپ‌تاپ‌های قدرتمند این سری، مدل MacBook MK193 2021 است. این لپ‌تاپ به صفحه‌نمایش با ابعاد 16.2 اینچی با رزولوشن 2234×3456 پیکسل از نوع Liquid Retina م ا به ارمغان می‌آورد.
+                        </p>
+                        <div class="col-8 d-flex justify-content-between align-items-center mt-4">
+                            <div class="me-2">
+                                <p class="text-black-50 mb-0 text-decoration-line-through" id="dicount">
+                                    58,460,000
+                                </p>
+                                <p class="themeColor">
+                                    55,570,000
+                                    <span class="text-black-50">تومان</span>
+                                </p>
+                            </div>
+                            <button class="btn bg-danger text-light rounded-4 py-2">مشاهده محصول</button>
+                            <a href="" class="btn text-decoration-none text-black-50 me-3 d-none d-md-flex justify-content-between align-items-center ms-3">
+                                <h6 class="d-flex justify-content-center align-items-center ">محصولات مرتبط ...</h6>
+                                <i class='bx bx-arrow-back'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-0 d-flex justify-content-center justify-content-lg-end align-items-end">
+                        <img src="./Asset/img/Rectangle.png" class="img-fluid pe-md-3 px-3 ps-md-0" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sale Festival -->
+        <section class="container my-5">
+            <div class="">
+                <img src="./Asset/img/saleFastival.png" alt="" class="img-fluid">
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section class="py-3 container">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex flex-column align-content-start justify-content-start">
+                        <h4>
+                            مطالب
+                            <span class="themeColor">وبلاگ</span>
+                        </h4>
+                        <h6 class="text-black-50 englishText">
+                            Blog Contents
+                        </h6>
+                    </div>
+                    <button class="btn btn-danger">مقالات بیشتر</button>
+                </div>
+
+                <div class="col-12">
+                    <div class="row" id="blogs">
+                        <!-- <div class="col-6 col-md-3 mb-3 mb-md-0">
+                            <div class="pt-0 d-flex flex-column justify-content-center align-items-start shadow rounded" id="firstProductSectionItem">
+                                <img src="./Asset/img/bram-naus-hgoIR_BbMVE-unsplash 1.png" class="img-fluid mb-3 rounded-top" alt="">
+                                <div class="mb-2 px-2">
+                                    <h6 class="">عمر باتری لپتاپ چگونه افزایش میبابد</h6>
+                                </div>
+                                <div class="col-12 px-2 mb-2 d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-danger py-1 px-2 rounded me-2" style="font-size: 10px;">آموزشی</button>
+                                    <h6 class="d-flex justify-content-center align-items-center flex-column text-black-50 mb-0" style="font-size: 10px;">18 اسفند 1401</h6>
+                                    <h6 class="d-flex justify-content-center align-items-center flex-column text-black-50 mb-0" style="font-size: 10px;">کامیاب صارمی</h6>
+                                    <h6 class="d-flex justify-content-center align-items-center flex-column text-black-50 mb-0" style="font-size: 10px;">248 بازدید</h6>
+                                </div>
+                                <span class="w-100 border-bottom"></span>
+                                <div class="d-flex justify-content-start align-items-center py-2 px-2 w-100">
+                                    <p style="font-size: 13px;">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است،
+                                    </p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Banner 2 -->
+        <section class="container mb-5 my-md-5 pb-5 p-md-0">
+            <div class="">
+                <img src="./Asset/img/بنر تکی.png" alt="" class="img-fluid">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container d-none d-md-block px-2">
+        <div class="col-12 mb-4" id="footer">
+            <div class="row mx-5">
+                <div class="col-12 mb-3">
+                    <div class="row p-4">
+                        <div class="col-8">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h5 class="lh-lg">لینک های مهم</h5>
+                                        <ul class="mb-md-4 mb-lg-0 ps-2 text-black-50">
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">اتاق خبر اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">فروش در اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">فرصت‌های شغلی</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">گزارش تخلف در اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">تماس با اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">درباره اریدو</a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <h5 class="lh-lg">همکاری با ما</h5>
+                                        <ul class="mb-md-4 mb-lg-0 ps-2 text-black-50">
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">اتاق خبر اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">فروش در اریدو</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                              <a href="#" class="text-black-50 text-decoration-none">نحوه ثبت سفارش</a>
+                                            </li>
+                                            <li class="lh-lg">
+                                                <a href="#" class="text-black-50 text-decoration-none">رویه ارسال سفارش</a>
+                                            </li>
+                                            <li class="lh-lg">
+                                              <a href="#" class="text-black-50 text-decoration-none">شیوه‌های پرداخت</a>
+                                            </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">اتاق خبر اریدو</a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3 px-0">
+                                        <h5 class="lh-lg">خدمات مشتریان</h5>
+                                        <ul class=" mb-md-4 mb-lg-0 ps-2 text-black-50">
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">پاسخ به پرسش‌های متداول</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">رویه‌های بازگرداندن کالا</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">شرایط استفاده</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">حریم خصوصی</a>
+                                          </li>
+                                          <li class="lh-lg">
+                                            <a href="#" class="text-black-50 text-decoration-none">گزارش باگ</a>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="col-12">
+                                <h5 class="lh-lg mb-5">
+                                    هدف ما جلب اعتماد شما است
+                                </h5>
+                                <div class="d-flex justify-content-between">
+                                    <img class="img-fluid" src="./Asset/img/samandhi.png" alt="">
+                                    <img class="img-fluid" src="./Asset/img/samanBank.png" alt="">
+                                    <img class="img-fluid" src="./Asset/img/eNamad.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <img class="img-fluid mb-3" src="./Asset/img/ooredoo.svg" alt="">
+                    <p class="text-black-50">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                    </p>
+                    <div class="bg-light d-flex justify-content-between align-item-center px-3 py-4 mt-4 mb-5 shadow rounded-4">
+                        <p class="my-0" style="font-size: 13px;">
+                            نظرات ، پیشنهادات و انتقادات خود را با ما در میان بگذارید
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center py-1" >
+                            <h6 class="my-0 me-2" style="font-size: 13px;">
+
+                                <span class="text-danger" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">تهران ، شهرک غرب ،</span>
+                                بلوار کاوه جنب بانک ملی پلاک ۹۴ واحد ۸
+                            </h6>
+                            <i class='bx bx-current-location'></i>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center py-1">
+                            <h6 class="my-0 me-2" style="font-size: 13px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                                <span class="text-danger" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">info</span>@skylax.ir
+                            </h6>
+                            <i class='bx bx-envelope' ></i>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center py-1">
+                            <h6 class="my-0 me-2" style="font-size: 13px;">
+                                <span class="text-danger">021</span>-22334455
+                            </h6>
+                            <i class='bx bx-phone-call' ></i>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h6 class="my-0" style="font-size: 13px;">
+                            برای استفاده از مطالب اریدو، داشتن «هدف غیرتجاری» و ذکر «منبع» کافیست. تمام حقوق اين وب‌سايت نیز برای شرکت فناوران اسکیلاکس (فروشگاه آنلاین ‌اریدو) است.
+                        </h6>
+                        <h6 class="my-0" style="font-size: 13px;">
+                            <span class="text-danger">طراحی و توسعه</span> : فناوران اسکیلاکس
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+       <!-- Mobile Footer -->
+    <section>
+        <div
+            class="col-12 d-flex d-lg-none py-1 px-3 justify-content-between align-items-center position-fixed bottom-0 start-0 shadow bg-white">
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center"
+                href="index.html">
+                <i class='bx bx-home fs-1 mb-1 text-danger'></i>
+                <p class="m-0">خانه</p>
+            </a>
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center"
+                href="404.html">
+                <i class='bx bx-category fs-1 mb-1 text-danger'></i>
+                <p class="m-0">دسته بندی</p>
+            </a>
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center position-relative"
+                href="shoppingCart.html">
+                <i class='bx bx-basket fs-1 mb-1 text-danger'></i>
+                <p class="m-0">سبد خرید</p>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+                    id="mobileCartValueBadge">
+                    0
+                </span>
+            </a>
+            <a class="btn border-0 text-decoration-none d-flex flex-column justify-content-center align-items-center"
+                href="login.html">
+                <i class='bx bx-user fs-1 mb-1 text-danger'></i>
+                <p class="m-0">حساب</p>
+            </a>
+        </div>
+    </section>
+</body>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./Asset/js/script.js" type="module"></script>
+
+</html>
